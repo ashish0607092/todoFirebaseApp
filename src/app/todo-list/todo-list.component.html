@@ -1,0 +1,13 @@
+<div class="container">
+  <button mat-raised-button color="primary" (click)="openCreateTodo()"> Add Todo </button>
+  <p>
+    Todo Count : {{todoList.length}}
+  </p>
+  <div class="list-container">
+    <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+      <div class="list" *cdkVirtualFor="let todo of todoList">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div>
