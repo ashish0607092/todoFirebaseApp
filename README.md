@@ -1,6 +1,10 @@
+# DemoApp
+
+TodoFirebaseApp (https://todofirebaseapp-15a02.firebaseapp.com/todo)
+
 # TodoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project is based on Ngxs State Management Library
 
 ## Development server
 
