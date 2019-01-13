@@ -1,6 +1,6 @@
 # DemoApp
 
-TodoFirebaseApp(https://todofirebaseapp-15a02.firebaseapp.com/todo)
+TodoFirebaseApp (https://todofirebaseapp-15a02.firebaseapp.com/todo)
 
 # TodoApp
 
