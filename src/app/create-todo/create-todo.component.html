@@ -1,11 +1,11 @@
-  <form [formGroup]="createTodoForm" (ngSubmit)="addTodo()">
-    <mat-form-field appearance="outline">
-      <mat-label>Title</mat-label>
-      <input matInput placeholder="Title" formControlName="title">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Description</mat-label>
-      <textarea matInput placeholder="Description" formControlName="description"></textarea>
-    </mat-form-field>
-    <button mat-raised-button type="submit" [disabled]="!createTodoForm.valid">Add Todo</button>
-  </form>
+<form [formGroup]="createTodoForm" (ngSubmit)="addTodo()">
+  <mat-form-field appearance="outline">
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Title" formControlName="title">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Description" formControlName="description"></textarea>
+  </mat-form-field>
+  <button mat-raised-button type="submit" color="primary" [disabled]="!createTodoForm.valid">Add Todo</button>
+</form>

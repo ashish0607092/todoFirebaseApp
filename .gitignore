@@ -7,7 +7,6 @@
 
 # dependencies
 /node_modules
-src/enviroments
 
 
 # IDEs and editors
@@ -39,3 +38,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/environments
+.firebaserc
+firebase.json
