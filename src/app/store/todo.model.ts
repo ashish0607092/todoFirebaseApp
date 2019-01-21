@@ -3,4 +3,5 @@ export interface Todo {
   description: string;
   completed: boolean;
   id: string;
+  time: number;
 }

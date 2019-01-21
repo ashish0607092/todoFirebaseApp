@@ -14,8 +14,16 @@ export interface TodoStateModel {
 })
 export class TodoState {
   @Selector()
-  public static getTodos(todos: TodoStateModel) {
-    return todos;
+  public static getAllTodos(data: TodoStateModel) {
+    return data.todos;
+  }
+  @Selector()
+  public static getActiveTodos(data: TodoStateModel) {
+    return data.todos.filter(todo => todo.completed === false);
+  }
+  @Selector()
+  public static getCompletedTodos(data: TodoStateModel) {
+    return data.todos.filter(todo => todo.completed === true);
   }
 
   @Action(AddTodo)

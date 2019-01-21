@@ -7,6 +7,9 @@
     <p [ngClass]="{'isCompleted':todo.completed}">
       {{todo.description}}
     </p>
+    <p class="time">
+      Due Date: {{todo.time | date:'short'}}
+    </p>
   </div>
 
 </div>

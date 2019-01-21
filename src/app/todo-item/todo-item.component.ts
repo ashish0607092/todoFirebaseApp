@@ -16,7 +16,6 @@ export class TodoItemComponent implements OnInit {
   updateTodo(isChecked, todo: Todo) {
     todo.completed = isChecked;
     this.store.dispatch(new UpdateTodo(todo)).subscribe(val => {
-      console.log(val);
     });
   }
 }

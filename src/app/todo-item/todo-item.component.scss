@@ -3,7 +3,11 @@
     float: right;
   }
 
-  .content {}
+  .content {
+    .time {
+      font-size: 15px;
+    }
+  }
 }
 
 .isCompleted {

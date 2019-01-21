@@ -24,7 +24,13 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { ScrollDispatchModule } from "@angular/cdk/scrolling";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
+import { NgxsStoragePluginModule } from "@ngxs/storage-plugin";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
+import { DatePipe } from "./date.pipe";
+import { MatIconModule } from "@angular/material";
+import { MatTabsModule } from "@angular/material/tabs";
+import { NgArrayPipesModule } from "angular-pipes";
 
 @NgModule({
   declarations: [
@@ -32,7 +38,8 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
     TodoListComponent,
     TodoItemComponent,
     HeaderComponent,
-    CreateTodoComponent
+    CreateTodoComponent,
+    DatePipe,
   ],
   imports: [
     BrowserModule,
@@ -47,14 +54,19 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatTabsModule,
+    MatIconModule,
+    NgArrayPipesModule,
     // AngularFireModule.initializeApp(environment.firebase, "TodoFirebaseApp"),
     // AngularFireAuthModule,
     // AngularFirestoreModule,
     // AngularFireStorageModule,
     NgxsModule.forRoot([TodoState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsStoragePluginModule.forRoot()
-
+    NgxsStoragePluginModule.forRoot(),
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

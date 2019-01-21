@@ -7,6 +7,7 @@ import { Store } from "@ngxs/store";
 import { v4 as uuid } from "uuid";
 import { AddTodo } from "../store/todo.actions";
 import { MatDialogRef } from "@angular/material";
+import * as moment from "moment";
 
 @Component({
   selector: "app-create-todo",
@@ -23,13 +24,15 @@ export class CreateTodoComponent implements OnInit {
     public dialogRef: MatDialogRef<CreateTodoComponent>
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
   addTodo() {
     const payload: Todo = {
       title: this.createTodoForm.controls["title"].value,
       description: this.createTodoForm.controls["description"].value,
       id: uuid(),
-      completed: false
+      completed: false,
+      time: moment().add(30, "m").valueOf()
     };
     this.store.dispatch(new AddTodo(payload)).subscribe(val => {
       if (val) {
@@ -37,4 +40,5 @@ export class CreateTodoComponent implements OnInit {
       }
     });
   }
+
 }
