@@ -29,7 +29,14 @@ npm test
 - [@ngxs/logger-plugin](https://ghub.io/@ngxs/logger-plugin): logger plugin for @ngxs/store
 - [@ngxs/schematics](https://ghub.io/@ngxs/schematics): NGXS schematics for Angular
 - [@ngxs/storage-plugin](https://ghub.io/@ngxs/storage-plugin): extendable storage plugin for @ngxs/store
-- [@ngxs/store](https://ghub.io/@ngxs/store): &lt;p align=&quot;center&quot;&gt;   &lt;img src=&quot;https://github.com/ngxs/store/raw/master/docs/assets/logo.png&quot;&gt;   &lt;br /&gt;   NGXS is a state management pattern + library for Angular   &lt;br /&gt;   &lt;br /&gt;   &lt;a href=&quot;https://now-examples-slackin-eqzjxuxoem.now.sh/&quot;&gt;&lt;img src=&quot;https://now-examples-slackin-eqzjxuxoem.now.sh/badge.svg&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://badge.fury.io/js/%40ngxs%2Fstore&quot;&gt;&lt;img src=&quot;https://badge.fury.io/js/%40ngxs%2Fstore.svg&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://codeclimate.com/github/ngxs/store/maintainability&quot;&gt;&lt;img src=&quot;https://api.codeclimate.com/v1/badges/5b43106a1ddff7d76a04/maintainability&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;https://codeclimate.com/github/ngxs/store/test_coverage&quot;&gt;&lt;img src=&quot;https://api.codeclimate.com/v1/badges/5b43106a1ddff7d76a04/test_coverage&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;https://circleci.com/gh/ngxs/store&quot;&gt;&lt;img src=&quot;https://circleci.com/gh/ngxs/store/tree/master.svg?style=svg&quot;&gt;&lt;/a&gt; &lt;/p&gt;
+- [@ngxs/store](https://ghub.io/@ngxs/store): &lt;p align=&quot;center&quot;&gt;
+   &lt;img src=&quot;https://github.com/ngxs/store/raw/master/docs/assets/logo.png&quot;&gt;
+   &lt;br /&gt;
+   NGXS is a state management pattern + library for Angular
+   &lt;br /&gt;
+   &lt;br /&gt;
+   &lt;a href=&quot;https://now-examples-slackin-eqzjxuxoem.now.sh/&quot;&gt;&lt;img src=&quot;https://now-examples-slackin-eqzjxuxoem.now.sh/badge.svg&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://badge.fury.io/js/%40ngxs%2Fstore&quot;&gt;&lt;img src=&quot;https://badge.fury.io/js/%40ngxs%2Fstore.svg&quot;&gt;&lt;/a&gt; &lt;a href=&quot;https://codeclimate.com/github/ngxs/store/maintainability&quot;&gt;&lt;img src=&quot;https://api.codeclimate.com/v1/badges/5b43106a1ddff7d76a04/maintainability&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;https://codeclimate.com/github/ngxs/store/test_coverage&quot;&gt;&lt;img src=&quot;https://api.codeclimate.com/v1/badges/5b43106a1ddff7d76a04/test_coverage&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;https://circleci.com/gh/ngxs/store&quot;&gt;&lt;img src=&quot;https://circleci.com/gh/ngxs/store/tree/master.svg?style=svg&quot;&gt;&lt;/a&gt;
+ &lt;/p&gt;
 - [angular-pipes](https://ghub.io/angular-pipes): Angular pipes library
 - [chance](https://ghub.io/chance): Chance - Utility library to generate anything random
 - [core-js](https://ghub.io/core-js): Standard library
