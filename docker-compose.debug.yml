@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  todofirebaseapp:
+    image: todofirebaseapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200

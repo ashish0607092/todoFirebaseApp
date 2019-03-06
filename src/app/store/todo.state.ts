@@ -1,7 +1,7 @@
 import { State, Action, Selector, StateContext } from "@ngxs/store";
-import { AddTodo, UpdateTodo } from "./todo.actions";
+import { AddTodo, UpdateTodo, DeleteTodo } from "./todo.actions";
 import { Todo } from "./todo.model";
-
+import * as _ from "lodash";
 export interface TodoStateModel {
   todos: Todo[];
 }
@@ -44,16 +44,13 @@ export class TodoState {
       todos: [...state.todos]
     });
   }
+  @Action(DeleteTodo)
+  public deleteTodo(
+    ctx: StateContext<TodoStateModel>,
+    { payload }: DeleteTodo
+  ) {
+    ctx.patchState({
+      todos: ctx.getState().todos.filter(todo => todo.id !== payload.id)
+    });
+  }
 }
-
-// @Action(UpdateTodo)
-// public updateTodo(
-//   ctx: StateContext<TodoStateModel>,
-//   { payload }: UpdateTodo
-// ) {
-//   const state = ctx.getState();
-//   ctx.patchState({
-//     todos: state.todos.filter(({ id }) => id !== payload.id)
-//   });
-// }
-// }

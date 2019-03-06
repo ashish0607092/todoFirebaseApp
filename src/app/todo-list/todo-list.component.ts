@@ -55,9 +55,7 @@ export class TodoListComponent implements OnInit {
       width: "500px"
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log("The dialog was closed");
-    });
+    dialogRef.afterClosed().subscribe(result => {});
   }
   changeTab(event: MatTabChangeEvent) {
     switch (event.index) {

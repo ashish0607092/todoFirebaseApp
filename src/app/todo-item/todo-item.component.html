@@ -1,6 +1,6 @@
 <div class="list-item">
-  <mat-checkbox class="checkbox" #complete [(ngModel)]="todo.completed" (change)="updateTodo(complete.checked,todo)"></mat-checkbox>
-  <div class="content">
+  <mat-checkbox class="float-right" #complete [(ngModel)]="todo.completed" (change)="updateTodo(complete.checked,todo)"></mat-checkbox>
+  <div class=" content">
     <p [ngClass]="{'isCompleted':todo.completed}">
       {{todo.title}}
     </p>
@@ -9,7 +9,8 @@
     </p>
     <p class="time">
       Due Date: {{todo.time | date:'short'}}
+      <mat-icon class="icon clickable float-right" (click)="deleteTodo(todo)">delete</mat-icon>
+
     </p>
   </div>
-
 </div>

@@ -1,11 +1,19 @@
-.list-item {
-  .checkbox {
-    float: right;
-  }
+@import '../../assets/styles/common.scss';
 
+.list-item {
   .content {
     .time {
       font-size: 15px;
+
+      .icon {
+        display: none;
+      }
+
+      &:hover {
+        .icon {
+          display: block;
+        }
+      }
     }
   }
 }

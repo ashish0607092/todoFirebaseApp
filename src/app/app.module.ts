@@ -21,7 +21,7 @@ import { NgxsModule } from "@ngxs/store";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatPaginatorModule } from "@angular/material/paginator";
-import { ScrollDispatchModule } from "@angular/cdk/scrolling";
+import { ScrollDispatchModule, ScrollingModule } from "@angular/cdk/scrolling";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { NgxsStoragePluginModule } from "@ngxs/storage-plugin";
@@ -31,6 +31,7 @@ import { DatePipe } from "./date.pipe";
 import { MatIconModule } from "@angular/material";
 import { MatTabsModule } from "@angular/material/tabs";
 import { NgArrayPipesModule } from "angular-pipes";
+import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { NgArrayPipesModule } from "angular-pipes";
     TodoItemComponent,
     HeaderComponent,
     CreateTodoComponent,
-    DatePipe,
+    DatePipe
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,7 @@ import { NgArrayPipesModule } from "angular-pipes";
     MatCheckboxModule,
     FormsModule,
     MatPaginatorModule,
-    ScrollDispatchModule,
+    ScrollingModule,
     MatDialogModule,
     MatFormFieldModule,
     ReactiveFormsModule,
@@ -62,7 +63,7 @@ import { NgArrayPipesModule } from "angular-pipes";
     // AngularFirestoreModule,
     // AngularFireStorageModule,
     NgxsModule.forRoot([TodoState]),
-    NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsLoggerPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot(),
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production

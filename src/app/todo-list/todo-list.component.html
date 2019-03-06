@@ -6,14 +6,22 @@
     <ng-container *ngFor="let tab of tabs">
       <mat-tab label={{tab.name}}>
         <div class="list-container">
-          <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-            <div class="list" *cdkVirtualFor="let todo of todoList | orderBy : '-time'">
-              <app-todo-item [todo]="todo"></app-todo-item>
-            </div>
-          </cdk-virtual-scroll-viewport>
+          <ng-container *ngIf="(todoList.length>0); then showTask else noTask">
+          </ng-container>
+          <ng-template #showTask>
+            <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+              <div class="list" *cdkVirtualFor="let todo of todoList | orderBy : '-time'">
+                <app-todo-item [todo]="todo"></app-todo-item>
+              </div>
+            </cdk-virtual-scroll-viewport>
+          </ng-template>
+          <ng-template #noTask>
+            <p>No Task For a Today <br> Enjoy your day </p>
+          </ng-template>
+
         </div>
       </mat-tab>
     </ng-container>
   </mat-tab-group>
-  <button (click)="generateNotification()">Generate Notifications</button>
+  <!-- <button (click)="generateNotification()">Generate Notifications</button> -->
 </div>
