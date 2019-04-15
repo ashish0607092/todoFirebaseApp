@@ -3,7 +3,6 @@ import { Todo } from "../store/todo.model";
 
 import { Select } from "@ngxs/store";
 import { TodoState } from "../store/todo.state";
-import { AddTodo } from "../store/todo.actions";
 import { Store } from "@ngxs/store";
 import { v4 as uuid } from "uuid";
 import { Chance } from "chance";
@@ -25,6 +24,13 @@ export class TodoListComponent implements OnInit {
   @Select(TodoState.getActiveTodos) activeTodos$;
   @Select(TodoState.getCompletedTodos) completedTodos$;
   @Select(TodoState.getAllTodos) allTodos$;
+  array = [
+    { name: "ashish", age: 25 },
+    { name: "zzzz", age: 15 },
+    { name: "fffff", age: 56 },
+    { name: "qqq", age: 12 },
+    { name: "eee", age: 67 }
+  ];
 
   tabs = [
     {
@@ -76,6 +82,7 @@ export class TodoListComponent implements OnInit {
         break;
     }
   }
+
   generateNotification() {
     const title = "Hello";
     const options = new PushNotificationOptions();
@@ -101,5 +108,22 @@ export class TodoListComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+  sortArray(key, order) {
+    this.array.sort((a, b) => {
+      if (order === "asc") {
+        if (a[key] > b[key]) {
+          return 1;
+        } else {
+          return -1;
+        }
+      } else {
+        if (a[key] < b[key]) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+    });
   }
 }

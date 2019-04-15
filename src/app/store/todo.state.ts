@@ -4,18 +4,24 @@ import { Todo } from "./todo.model";
 import * as _ from "lodash";
 export interface TodoStateModel {
   todos: Todo[];
+  filter: Array<Array<number>>;
 }
 
 @State<TodoStateModel>({
   name: "todo",
   defaults: {
-    todos: []
+    todos: [],
+    filter: []
   }
 })
 export class TodoState {
   @Selector()
   public static getAllTodos(data: TodoStateModel) {
     return data.todos;
+  }
+  @Selector()
+  public static getAllFilter(data: TodoStateModel) {
+    return data.filter;
   }
   @Selector()
   public static getActiveTodos(data: TodoStateModel) {

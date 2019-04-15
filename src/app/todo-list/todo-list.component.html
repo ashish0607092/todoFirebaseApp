@@ -1,4 +1,10 @@
 <div class="container">
+  <button (click)="sortArray('age','asc')">sortArrayASCAGE</button>
+  <button (click)="sortArray('age','desc')">sortArrayDSCAGE</button>
+  <button (click)="sortArray('name','asc')">sortArrayASCNAME</button>
+  <button (click)="sortArray('name','desc')">sortArrayDSCNAME</button>
+  {{array | json}}
+
   <button mat-mini-fab color="primary" (click)="openCreateTodo()">
     <mat-icon>add</mat-icon>
   </button>
@@ -23,5 +29,4 @@
       </mat-tab>
     </ng-container>
   </mat-tab-group>
-  <!-- <button (click)="generateNotification()">Generate Notifications</button> -->
 </div>

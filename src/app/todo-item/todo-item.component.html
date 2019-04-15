@@ -1,5 +1,6 @@
 <div class="list-item">
-  <mat-checkbox class="float-right" #complete [(ngModel)]="todo.completed" (change)="updateTodo(complete.checked,todo)"></mat-checkbox>
+  <mat-checkbox class="float-right" #complete [(ngModel)]="todo.completed" (change)="updateTodo(complete.checked,todo)">
+  </mat-checkbox>
   <div class=" content">
     <p [ngClass]="{'isCompleted':todo.completed}">
       {{todo.title}}

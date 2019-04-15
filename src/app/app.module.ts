@@ -32,6 +32,7 @@ import { MatIconModule } from "@angular/material";
 import { MatTabsModule } from "@angular/material/tabs";
 import { NgArrayPipesModule } from "angular-pipes";
 import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
     TodoItemComponent,
     HeaderComponent,
     CreateTodoComponent,
-    DatePipe
+    DatePipe,
+    DynamicFormComponent
   ],
   imports: [
     BrowserModule,
