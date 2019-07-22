@@ -1,30 +1,37 @@
 <div class="container">
-  <button (click)="sortArray('age','asc')">sortArrayASCAGE</button>
-  <button (click)="sortArray('age','desc')">sortArrayDSCAGE</button>
-  <button (click)="sortArray('name','asc')">sortArrayASCNAME</button>
-  <button (click)="sortArray('name','desc')">sortArrayDSCNAME</button>
-  {{array | json}}
-
   <button mat-mini-fab color="primary" (click)="openCreateTodo()">
     <mat-icon>add</mat-icon>
   </button>
+  <button
+    style="float: left;"
+    mat-mini-fab
+    color="primary"
+    (click)="switchToCalendar()"
+  >
+    <mat-icon>calendar_today</mat-icon>
+  </button>
   <mat-tab-group (selectedTabChange)="changeTab($event)">
     <ng-container *ngFor="let tab of tabs">
-      <mat-tab label={{tab.name}}>
+      <mat-tab label="{{ tab.name }}">
         <div class="list-container">
-          <ng-container *ngIf="(todoList.length>0); then showTask else noTask">
+          <ng-container *ngIf="todoList.length > 0; then showTask; else noTask">
           </ng-container>
           <ng-template #showTask>
             <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-              <div class="list" *cdkVirtualFor="let todo of todoList | orderBy : '-time'">
+              <div
+                class="list"
+                *cdkVirtualFor="let todo of todoList | orderBy: '-time'"
+              >
                 <app-todo-item [todo]="todo"></app-todo-item>
               </div>
             </cdk-virtual-scroll-viewport>
           </ng-template>
           <ng-template #noTask>
-            <p>No Task For a Today <br> Enjoy your day </p>
+            <p>
+              No Task For a Today <br />
+              Enjoy your day
+            </p>
           </ng-template>
-
         </div>
       </mat-tab>
     </ng-container>

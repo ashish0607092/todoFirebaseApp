@@ -13,6 +13,7 @@ import {
   PushnotificationService,
   PushNotificationOptions
 } from "../pushnotification.service";
+import { Navigate } from "@ngxs/router-plugin";
 @Component({
   selector: "app-todo-list",
   templateUrl: "./todo-list.component.html",
@@ -108,6 +109,9 @@ export class TodoListComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+  switchToCalendar() {
+    this.store.dispatch(new Navigate(["calendar"]));
   }
   sortArray(key, order) {
     this.array.sort((a, b) => {

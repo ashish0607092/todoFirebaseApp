@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { MatSelectModule } from "@angular/material/select";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 // import { environment } from "../environments/environment";
@@ -32,7 +32,14 @@ import { MatIconModule } from "@angular/material";
 import { MatTabsModule } from "@angular/material/tabs";
 import { NgArrayPipesModule } from "angular-pipes";
 import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
-import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DynamicFormComponent } from "./dynamic-form/dynamic-form.component";
+import { SelectWithInputComponent } from "./select-with-input/select-with-input.component";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { CalendarComponent } from "./calendar/calendar.component";
+import { FullCalendarModule } from "@fullcalendar/angular";
+import { MatCardModule } from "@angular/material/card";
+import { NgxsRouterPluginModule } from "@ngxs/router-plugin";
 
 @NgModule({
   declarations: [
@@ -42,10 +49,14 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
     HeaderComponent,
     CreateTodoComponent,
     DatePipe,
-    DynamicFormComponent
+    DynamicFormComponent,
+    SelectWithInputComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
+    MatAutocompleteModule,
+    MatChipsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -60,6 +71,8 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
     MatTabsModule,
     MatIconModule,
     NgArrayPipesModule,
+    MatSelectModule,
+    MatCardModule,
     // AngularFireModule.initializeApp(environment.firebase, "TodoFirebaseApp"),
     // AngularFireAuthModule,
     // AngularFirestoreModule,
@@ -69,9 +82,10 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
     NgxsStoragePluginModule.forRoot(),
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
-    })
+    }),
+    FullCalendarModule,
+    NgxsRouterPluginModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent],
   entryComponents: [CreateTodoComponent]
 })
