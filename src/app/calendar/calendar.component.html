@@ -1,6 +1,6 @@
 <div class="container">
   <button
-    style="float: left; 
+    style="float: left;
     margin-right: 12px;"
     mat-mini-fab
     color="primary"
@@ -19,5 +19,14 @@
     [plugins]="calendarPlugins"
     [weekends]="calendarWeekends"
     [events]="calendarEvents"
+    [editable]="true"
+    [dragScroll]="true"
+    [dropAccept]="true"
+    [selectable]="true"
+    [droppable]="true"
+    [dragRevertDuration]="0"
+    (dateClick)="dateClick($event)"
+    (eventDrop)="onEventDrop($event)"
+    (eventDragStop)="onEventDragStop($event)"
   ></full-calendar>
 </div>

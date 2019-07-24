@@ -1,0 +1,12 @@
+.float-right {
+  float: right;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.not-clickable {
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=common.css.map */

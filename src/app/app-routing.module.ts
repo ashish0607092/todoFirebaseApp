@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
 import { TodoListComponent } from "./todo-list/todo-list.component";
 import { DynamicFormComponent } from "./dynamic-form/dynamic-form.component";
 import { SelectWithInputComponent } from "./select-with-input/select-with-input.component";
@@ -14,7 +14,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
