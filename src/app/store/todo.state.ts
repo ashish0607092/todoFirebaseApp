@@ -1,5 +1,5 @@
 import { State, Action, Selector, StateContext } from "@ngxs/store";
-import { AddTodo, UpdateTodo, DeleteTodo } from "./todo.actions";
+import { AddTodo, UpdateTodo, DeleteTodo, UpdateSingleTodo } from "./todo.actions";
 import { Todo } from "./todo.model";
 import * as _ from "lodash";
 export interface TodoStateModel {
@@ -48,6 +48,24 @@ export class TodoState {
     const state = ctx.getState();
     ctx.patchState({
       todos: [...state.todos]
+    });
+  }
+  @Action(UpdateSingleTodo)
+  public updateSingleTodo(ctx: StateContext<TodoStateModel>, event: UpdateSingleTodo) {
+    const state = ctx.getState();
+    ctx.patchState({
+      todos: state.todos.map(todo => {
+        if (todo.title === event.payload.title) {
+          return {
+            ...todo,
+            time: event.payload.time
+          };
+        } else {
+          return {
+            ...todo,
+          };
+        }
+      })
     });
   }
   @Action(DeleteTodo)

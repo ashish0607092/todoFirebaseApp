@@ -1,32 +1,14 @@
 <div class="container">
-  <button
-    style="float: left;
-    margin-right: 12px;"
-    mat-mini-fab
-    color="primary"
-    (click)="switchToList()"
-  >
+  <button style="float: left;
+    margin-right: 12px;" mat-mini-fab color="primary" (click)="switchToList()">
     <mat-icon>list</mat-icon>
   </button>
-  <full-calendar
-    #calendar
-    defaultView="dayGridMonth"
-    [header]="{
+  <full-calendar #calendar defaultView="dayGridMonth" [header]="{
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-    }"
-    [plugins]="calendarPlugins"
-    [weekends]="calendarWeekends"
-    [events]="calendarEvents"
-    [editable]="true"
-    [dragScroll]="true"
-    [dropAccept]="true"
-    [selectable]="true"
-    [droppable]="true"
-    [dragRevertDuration]="0"
-    (dateClick)="dateClick($event)"
-    (eventDrop)="onEventDrop($event)"
-    (eventDragStop)="onEventDragStop($event)"
-  ></full-calendar>
+    }" [plugins]="calendarPlugins" [weekends]="calendarWeekends" [events]="calendarEvents" [editable]="true"
+    [dragScroll]="true" [dropAccept]="true" [selectable]="true" [droppable]="true" [dragRevertDuration]="0"
+    (dateClick)="dateClick($event)" (eventDrop)="onEventDrop($event)" (eventDragStop)="onEventDragStop($event)">
+  </full-calendar>
 </div>
