@@ -6,10 +6,10 @@ import timeGrigPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction"; // for dateClick
 import { Store, Select } from "@ngxs/store";
 import { Navigate } from "@ngxs/router-plugin";
-import { TodoState } from "../store/todo.state";
+import { TodoState } from "../../store/todo.state";
 import { SubSink } from "subsink";
-import { Todo } from "../store/todo.model";
-import { UpdateTodo, DeleteTodo, UpdateSingleTodo } from "../store/todo.actions";
+import { Todo } from "../../store/todo.model";
+import { UpdateTodo, DeleteTodo, UpdateSingleTodo } from "../../store/todo.actions";
 @Component({
   selector: "app-calendar",
   templateUrl: "./calendar.component.html",

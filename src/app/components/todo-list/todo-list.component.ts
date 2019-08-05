@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Todo } from "../store/todo.model";
+import { Todo } from "../../store/todo.model";
 
 import { Select } from "@ngxs/store";
-import { TodoState } from "../store/todo.state";
+import { TodoState } from "../../store/todo.state";
 import { Store } from "@ngxs/store";
 import { v4 as uuid } from "uuid";
 import { Chance } from "chance";
@@ -12,7 +12,7 @@ import { MatDialog } from "@angular/material";
 import {
   PushnotificationService,
   PushNotificationOptions
-} from "../pushnotification.service";
+} from "../../pushnotification.service";
 import { Navigate } from "@ngxs/router-plugin";
 @Component({
   selector: "app-todo-list",

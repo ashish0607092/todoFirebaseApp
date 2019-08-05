@@ -1,5 +1,5 @@
-import { Todo } from "../store/todo.model";
-import { UpdateTodo, DeleteTodo } from "../store/todo.actions";
+import { Todo } from "../../store/todo.model";
+import { UpdateTodo, DeleteTodo } from "../../store/todo.actions";
 import { Store } from "@ngxs/store";
 import { Component, OnInit, Input } from "@angular/core";
 

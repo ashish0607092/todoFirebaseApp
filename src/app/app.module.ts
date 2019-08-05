@@ -9,10 +9,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // import { AngularFireAuthModule } from "@angular/fire/auth";
 // import { AngularFirestoreModule } from "@angular/fire/firestore";
 // import { AngularFireStorageModule } from "@angular/fire/storage";
-import { TodoListComponent } from "./todo-list/todo-list.component";
-import { TodoItemComponent } from "./todo-item/todo-item.component";
-import { HeaderComponent } from "./header/header.component";
-import { CreateTodoComponent } from "./create-todo/create-todo.component";
+import { TodoListComponent } from "./components/todo-list/todo-list.component";
+import { TodoItemComponent } from "./components/todo-item/todo-item.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { CreateTodoComponent } from "./components/create-todo/create-todo.component";
 import { TodoState } from "./store/todo.state";
 import { MatInputModule } from "@angular/material";
 import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
@@ -32,11 +32,9 @@ import { MatIconModule } from "@angular/material";
 import { MatTabsModule } from "@angular/material/tabs";
 import { NgArrayPipesModule } from "angular-pipes";
 import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
-import { DynamicFormComponent } from "./dynamic-form/dynamic-form.component";
-import { SelectWithInputComponent } from "./select-with-input/select-with-input.component";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
-import { CalendarComponent } from "./calendar/calendar.component";
+import { CalendarComponent } from "./components/calendar/calendar.component";
 import { FullCalendarModule } from "@fullcalendar/angular";
 import { MatCardModule } from "@angular/material/card";
 import { NgxsRouterPluginModule } from "@ngxs/router-plugin";
@@ -49,8 +47,6 @@ import { NgxsRouterPluginModule } from "@ngxs/router-plugin";
     HeaderComponent,
     CreateTodoComponent,
     DatePipe,
-    DynamicFormComponent,
-    SelectWithInputComponent,
     CalendarComponent
   ],
   imports: [
@@ -89,4 +85,4 @@ import { NgxsRouterPluginModule } from "@ngxs/router-plugin";
   bootstrap: [AppComponent],
   entryComponents: [CreateTodoComponent]
 })
-export class AppModule {}
+export class AppModule { }
