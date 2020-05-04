@@ -7,8 +7,8 @@ import { Store } from "@ngxs/store";
 import { v4 as uuid } from "uuid";
 import { Chance } from "chance";
 import { CreateTodoComponent } from "../create-todo/create-todo.component";
-import { MatTabChangeEvent } from "@angular/material";
-import { MatDialog } from "@angular/material";
+import { MatTabChangeEvent } from "@angular/material/tabs";
+import { MatDialog } from "@angular/material/dialog";
 import {
   PushnotificationService,
   PushNotificationOptions
