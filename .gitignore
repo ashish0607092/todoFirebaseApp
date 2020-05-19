@@ -38,7 +38,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-src/environments
 .firebaserc
 firebase.json
 package-lock.json
