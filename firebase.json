@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/TodoApp",
+    "site": "todofirebaseapp-15a02",
     "ignore": [
       "firebase.json",
       "**/.*",
