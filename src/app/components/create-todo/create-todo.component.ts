@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngxs/store";
 import { v4 as uuid } from "uuid";
 import { AddTodo } from "../../store/todo.actions";
-import { MatDialogRef } from "@angular/material";
+import { MatDialogRef } from "@angular/material/dialog";
 import * as moment from "moment";
 
 @Component({
